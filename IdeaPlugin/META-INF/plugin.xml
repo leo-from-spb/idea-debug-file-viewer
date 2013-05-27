@@ -35,8 +35,7 @@
   <actions>
     <action id="DebugFileViewer.ViewFile" class="leofromspb.idea.debugFile.DebugFileAction"
             text="View File" description="View File">
-        <!--add-to-group group-id="DebuggerActions" relative-to-action="Debugger.AddToWatch" anchor="after"/-->
-        <add-to-group group-id="DebuggerActions" anchor="last"/>
+        <add-to-group group-id="EditorPopupMenu" relative-to-action="Debugger.AddToWatch" anchor="before"/>
         <add-to-group group-id="ToolsMenu" anchor="first"/>
     </action>
   </actions>
