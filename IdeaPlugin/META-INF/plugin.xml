@@ -1,0 +1,47 @@
+<idea-plugin version="2">
+  <id>leo-from-spb.debug-file-viewer</id>
+  <name>Debug File Viewer</name>
+  <version>1.0</version>
+  <vendor email="leonidos@gmail.com">Leonid Bushuev</vendor>
+
+  <description><![CDATA[
+      Allows to view files content in debug sessions.
+      ]]></description>
+
+  <change-notes><![CDATA[
+      The first version.
+      ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="128.0"/>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <component>
+        <implementation-class>leofromspb.idea.debugFile.TheProjectComponent</implementation-class>
+    </component>
+  </project-components>
+
+  <actions>
+    <action id="DebugFileViewer.ViewFile" class="leofromspb.idea.debugFile.DebugFileAction"
+            text="View File" description="View File">
+        <!--add-to-group group-id="DebuggerActions" relative-to-action="Debugger.AddToWatch" anchor="after"/-->
+        <add-to-group group-id="DebuggerActions" anchor="last"/>
+        <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+</idea-plugin>
